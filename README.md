@@ -13,6 +13,6 @@ Also make sure that BQ25120A_VINLS_QFN (Input to LS/LDO) is connected to BQ25120
 
 Scan_I2C_registers:
 This file scans the 7-bit I2C addresses of the slaves on the I2C channel. Expected addresses are the below:
-MC3672 (A1 pin set to GND) I2C ADD:0x6C
-TMP108 (A0 Pin set to GND) I2C ADD:0x48
-BQ25120 I2C ADD:0x6A
+MC3672 (A1 pin set to GND) I2C ADD:0x6C;
+TMP108 (A0 Pin set to GND) I2C ADD:0x48;
+BQ25120 I2C ADD:0x6A;
