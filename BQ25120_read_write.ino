@@ -24,41 +24,28 @@ void setup()
   Serial.begin(115200);
 
 
-  Wire.beginTransmission(0x6A); // transmit to device #44 (0x2c)                             // device address is specified in datasheet
+  Wire.beginTransmission(0x6A); // device address is specified in datasheet
   Wire.write(byte(0x06));            // sends instruction byte  
-  Wire.write(val);             // sends potentiometer value byte  
+  Wire.write(val);               
   Wire.endTransmission();     // stop transmitting
   delay(500);
-/*
-  byte d;
-  Wire.requestFrom(0x06, 2); //reading to see if the data has been written or not.
-  while(Wire.available());
-  {
-   d = Wire.read();
-   Serial.println(d, HEX);
-  }
- delay(500);
-*/
 
 /////////////////////////////LDO change///////////////
 
- // pinMode(31, INPUT); 
-  //digitalWrite(31, LOW); //disable LSCTRL
 
-
-  Wire.beginTransmission(0x6A); // transmit to device #44 (0x2c)
+  Wire.beginTransmission(0x6A); 
   Wire.write(byte(0x07));            // sends instruction byte  
   Wire.write(0x1C);             // change LDO 
   Wire.endTransmission();     // stop transmitting
   delay(500);
 
-  Wire.beginTransmission(0x6A); // transmit to device #44 (0x2c)
+  Wire.beginTransmission(0x6A); 
   Wire.write(byte(0x07));            // sends instruction byte  
   Wire.write(0x9C);             // ENABLE LDO  
   Wire.endTransmission();     // stop transmitting
   delay(500);
 
-//digitalWrite(31, HIGH);
+
 
 }
 
