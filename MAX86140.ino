@@ -13,7 +13,7 @@ void setup() {
 SPI.begin();
 SPI.setDataMode(SPI_MODE3);
 SPI.setBitOrder(MSBFIRST);
-//SPI.setClockDivider(SPI_CLOCK_DIV16);
+
 
 Serial.println("MAX86140 SPI Sample Code");
 }
@@ -21,15 +21,6 @@ byte val = 0x00;
 ///////////////////////////////////////////////////////////
 void loop() 
 {
-/*
-//SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE3));
-digitalWrite(MAX, LOW);
-SPI.transfer(0xF2); //memory control register 0xF2
-SPI.transfer(0x02); //enable write access to memory through SPI. Page86 in datasheet
-digitalWrite(MAX, HIGH);
-//SPI.endTransaction();
-delay(100);
-*/
 
 //SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE3));
 digitalWrite(MAX, LOW);
