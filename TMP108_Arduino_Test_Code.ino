@@ -61,24 +61,7 @@ void loop()
   Serial.println(" C");
 }
 
-/*
-double configuration (void)
-{
 
-  //Point to device 0x48
-  Wire.beginTransmission(72);
-  //Point to register 0x00 (Configuration Register:0x01)
-  Wire.write(0x01);
-  //change configuration
-  Wire.write(0x4610);
-  //Relinquish master control of I2C line
-  Wire.endTransmission();
-  //delay to allow for sufficient conversion time
-  delay(10);
-
-}
-
-*/
 double sensorRead(void)
 {
   //temp holds the two bytes of data read back from the TMP102
